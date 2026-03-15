@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:       #000000;
+  --surface:  rgba(255,255,255,0.04);
+  --border:   rgba(255,255,255,0.09);
+  --text:     #f5f5f7;
+  --muted:    rgba(245,245,247,0.45);
+  --dimmed:   rgba(245,245,247,0.22);
+  --accent:   #30d158;    /* Apple system green — fresh, medical */
+  --danger:   #ff453a;    /* Apple system red  */
+  --amber:    #ffd60a;    /* Apple system yellow */
+  --blue:     #0a84ff;    /* Apple system blue */
+}
+
+.light-mode {
+  --bg:       #ffffff;
+  --surface:  #f5f5f7;
+  --border:   rgba(0,0,0,0.08);
+  --text:     #1d1d1f;
+  --muted:    rgba(0,0,0,0.65);
+  --dimmed:   rgba(0,0,0,0.35);
+}
+
+html, body, #root {
+  height: 100%; width: 100%;
+  margin: 0; padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+@keyframes shimmer  { 0%{background-position:-200% center;} 100%{background-position:200% center;} }
+@keyframes pulse    { 0%,100%{opacity:1;} 50%{opacity:.5;} }
+@keyframes orb      { 0%,100%{transform:scale(1) translate(0,0);} 50%{transform:scale(1.07) translate(-8px,12px);} }
+
+.fade-up    { animation: fadeUp .45s cubic-bezier(.22,1,.36,1) forwards; }
+.orb-anim   { animation: orb 9s ease-in-out infinite; }
+.orb-anim-r { animation: orb 12s ease-in-out infinite reverse; }
+
+/* ── Specialized Glass Panes ── */
+.glass-sidebar {
+  background: var(--surface);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border-right: 1px solid var(--border);
+}
+
+.glass-canvas {
+  background: transparent;
+  backdrop-filter: blur(4px); /* Light blur to distinguish, but keep graph crisp */
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.glass-panel {
+  background: var(--surface);
+  backdrop-filter: blur(60px) saturate(210%);
+  -webkit-backdrop-filter: blur(60px) saturate(210%);
+  border-left: 1px solid var(--border);
+  box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+}
+
+/* ── Decorative Background ── */
+.bg-decoration {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+.light-mode .orb { opacity: 0.08; filter: blur(100px); }
+
+/* ── Apple-style gradient text ── */
+.hero-gradient {
+  background: linear-gradient(160deg, #ffffff 30%, rgba(245,245,247,0.55) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Accent Green text ── */
+.text-accent { color: var(--accent); }
+
+/* ── Primary CTA button ── */
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: filter .15s ease, transform .15s ease;
+  box-shadow: 0 0 24px rgba(48,209,88,.25);
+}
+.btn-primary:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 6px 30px rgba(48,209,88,.32); }
+.btn-primary:active:not(:disabled) { transform: scale(.98); filter: brightness(.95); }
+.btn-primary:disabled              { background: rgba(255,255,255,.08); color: rgba(255,255,255,.2); box-shadow: none; }
+
+/* ── Sidebar input ── */
+.mac-input {
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: border-color .2s;
+}
+.mac-input:focus { outline:none; border-color: rgba(48,209,88,.5); }
+.mac-input::placeholder { color: var(--dimmed); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,.10); border-radius:99px; }
+
+/* ── ReactFlow overrides ── */
+.react-flow__renderer  { background: transparent !important; }
+.react-flow__controls  { background: rgba(18,18,18,.85) !important; border: 1px solid var(--border) !important; border-radius: 10px !important; box-shadow: none !important; }
+.react-flow__controls-button { background: transparent !important; border: none !important; border-bottom: 1px solid var(--border) !important; }
+.react-flow__controls-button:last-child { border-bottom: none !important; }
+.react-flow__controls-button svg { fill: rgba(255,255,255,.6) !important; }
+.react-flow__controls-button:hover { background: rgba(48,209,88,.12) !important; }

@@ -1,0 +1,9 @@
+Abstract 1: "A 65-year-old patient with atrial fibrillation and type 2 diabetes was maintained on Warfarin. Following the initiation of Glipizide (a sulfonylurea) for glycemic control, the patient experienced severe bleeding. In vitro studies demonstrate that Glipizide strongly inhibits the CYP2C9 enzyme, which is the primary metabolic pathway for Warfarin clearance, leading to its toxic accumulation."
+
+Abstract 2: "Concurrent administration of NSAIDs such as Ibuprofen with anticoagulant therapy like Warfarin significantly elevates the risk of gastrointestinal hemorrhage. Ibuprofen not only disrupts platelet aggregation but also aggressively displaces Warfarin from plasma proteins, increasing the free, active fraction of the anticoagulant in the bloodstream."
+
+Abstract 3: "A patient suffering from rheumatoid arthritis and hyperlipidemia was treated with Methotrexate and Simvastatin. The patient later developed severe myopathy. Investigations revealed that the patient was concurrently prescribed Clarithromycin, a potent CYP3A4 inhibitor. Since Simvastatin is metabolized by CYP3A4, its clearance was severely reduced, causing toxic statin buildup."
+
+Abstract 4: "Metformin is a common first-line treatment for diabetes. When patients on Metformin undergo procedures requiring IV contrast media, there is a risk of contrast-induced nephropathy. This acute decline in renal function can lead to reduced renal clearance of Metformin, resulting in a dangerous accumulation and subsequent lactic acidosis."
+
+Abstract 5: "A complex drug cascade was observed in a patient taking Warfarin, Glipizide, and Ibuprofen. Glipizide's inhibition of CYP2C9 impaired Warfarin metabolism. Concurrently, Ibuprofen induced gastric mucosal injury and inhibited platelet function. The combination of elevated serum Warfarin levels and NSAID-induced vulnerabilities resulted in a life-threatening bleeding event."

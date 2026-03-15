@@ -1,0 +1,10 @@
+fastapi==0.104.1
+uvicorn==0.23.2
+neo4j==5.14.1
+pydantic==2.5.2
+pydantic-settings==2.1.0
+requests==2.31.0
+python-dotenv==1.0.0
+openai>=1.0.0
+pandas
+lxml

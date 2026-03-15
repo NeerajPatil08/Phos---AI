@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phos AI | Drug Interaction Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-mode">
+    <!-- Ambient Background -->
+    <div class="bg-decoration">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="container">
+            <div class="logo">
+                <i data-lucide="stethoscope" class="icon-accent"></i>
+                <span>Phos AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="http://localhost:5173" class="btn-primary">Launch App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content fade-up">
+                <span class="badge">AI-Powered Interaction Safety</span>
+                <h1 class="hero-gradient">See what your <br> prescriptions <span class="text-accent">don't tell you.</span></h1>
+                <p class="hero-sub">Multi-hop biological cascade detection powered by Phos Intelligence. Identify hidden risks before they become clinical symptoms.</p>
+                <div class="hero-btns">
+                    <a href="http://localhost:5173" class="btn-primary large">Start Analysis <i data-lucide="zap"></i></a>
+                    <a href="#how-it-works" class="btn-secondary large">Learn More</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title fade-up">Precision Intelligence</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass-panel fade-up delay-1">
+                    <i data-lucide="git-branch" class="icon-accent"></i>
+                    <h3>Cascade Detection</h3>
+                    <p>Detect indirect interactions through enzyme pathways and shared biological targets.</p>
+                </div>
+                <div class="feature-card glass-panel fade-up delay-2">
+                    <i data-lucide="brain-circuit" class="icon-accent"></i>
+                    <h3>AI Synthesis</h3>
+                    <p>State-of-the-art LLMs synthesize complex graph data into actionable clinical summaries.</p>
+                </div>
+                <div class="feature-card glass-panel fade-up delay-3">
+                    <i data-lucide="file-text" class="icon-accent"></i>
+                    <h3>Clinical Reports</h3>
+                    <p>Generate professional-grade PDF reports ready for physician consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <i data-lucide="stethoscope" class="icon-accent"></i>
+                    <span>Phos AI</span>
+                </div>
+                <p>&copy; 2026 Phos AI Healthcare. For clinical decision support only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Simple Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

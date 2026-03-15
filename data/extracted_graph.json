@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "Warfarin",
+      "label": "Drug"
+    },
+    {
+      "id": "Glipizide",
+      "label": "Drug"
+    },
+    {
+      "id": "Ibuprofen",
+      "label": "Drug"
+    },
+    {
+      "id": "CYP2C9",
+      "label": "Enzyme"
+    },
+    {
+      "id": "Platelets",
+      "label": "Symptom"
+    },
+    {
+      "id": "Bleeding",
+      "label": "Symptom"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Glipizide",
+      "target": "CYP2C9",
+      "type": "INHIBITS"
+    },
+    {
+      "source": "CYP2C9",
+      "target": "Warfarin",
+      "type": "METABOLIZES"
+    },
+    {
+      "source": "Warfarin",
+      "target": "Bleeding",
+      "type": "CAUSES"
+    },
+    {
+      "source": "Ibuprofen",
+      "target": "Platelets",
+      "type": "INHIBITS"
+    },
+    {
+      "source": "Platelets",
+      "target": "Bleeding",
+      "type": "AFFECTS"
+    }
+  ]
+}
+
